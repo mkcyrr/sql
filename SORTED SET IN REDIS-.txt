@@ -1,0 +1,21 @@
+SORTED SET IN REDIS:-
+
+1.ZADD – Adds members to a sorted set, or updates the score of an existing member.
+ZADD leaderboard 100 "Alice" 200 "Bob" 150 "Charlie"
+Adds members Alice, Bob, and Charlie with scores 100, 200, and 150, respectively.
+
+2.ZRANGE – Returns a range of elements from a sorted set by rank (ordered by score).
+ZRANGE leaderboard 0 -1 WITHSCORES
+Output:
+["Alice", "100", "Charlie", "150", "Bob", "200"]
+0 -1 specifies the range (from the first to the last element).
+
+3.ZRANK – Returns the rank (index) of a member in a sorted set, where the rank is zero-based (lower score = higher rank).
+ZRANK leaderboard "Charlie"
+Output: 1 (Charlie is ranked 1st based on score).
+
+4.ZREVRANK – Returns the rank (index) of a member in a sorted set, ordered by reverse score (higher score = higher rank).
+Output: 1 (Charlie is ranked 1st when sorted by reverse score).
+
+5.ZCARD leaderboard
+output-3

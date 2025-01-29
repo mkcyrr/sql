@@ -1,0 +1,29 @@
+
+Redis List Data Type
+
+1.Add elements to the left (LPUSH)
+LPUSH tasks "Task1" "Task2"
+2.Add elements to the right (RPUSH)
+RPUSH tasks "Task3"
+3.Get elements from the list (LRANGE)
+LRANGE tasks 0 -1
+4.Remove and return the first element (LPOP)
+LPOP tasks
+5.Remove and return the last element (RPOP)
+RPOP tasks
+6.Get the length of the list (LLEN)
+LLEN tasks
+7.Get an element by index (LINDEX)
+LINDEX tasks 0
+8.Trim a list to a specific range (LTRIM)
+LTRIM tasks 0 1
+
+
+
+
+
+
+
+
+
+

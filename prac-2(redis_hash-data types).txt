@@ -1,0 +1,41 @@
+redis-cli
+ping
+
+---start performing--
+
+Hash data types in redis:-
+1. Create a Hash (HMSET / HSET)
+HSET user:1001 name "Alice" age "25" city "New York"
+2. Get a Specific Field (HGET)
+HGET user:1001 name
+3. Get All Fields (HGETALL)
+HGETALL user:1001
+4. Get Only Specific Fields (HMGET)
+HMGET user:1001 name age
+5. Check if a Field Exists (HEXISTS)
+HEXISTS user:1001 age
+6. Delete a Field (HDEL)
+HDEL user:1001 age
+7. Count Fields in Hash (HLEN)
+HLEN user:1001
+8. Get All Keys in Hash (HKEYS)
+HKEYS user:1001
+9. Get All Values in Hash (HVALS)
+HVALS user:1001
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

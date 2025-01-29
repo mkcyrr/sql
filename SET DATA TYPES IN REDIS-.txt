@@ -1,0 +1,34 @@
+SET DATA TYPES IN REDIS:-
+
+1.Add elements to a Set (SADD)
+SADD fruits "Apple" "Banana" "Orange" "Apple"
+Output: (integer) 3 (since "Apple" was added only once)
+
+2.Get all elements in a Set (SMEMBERS)
+SMEMBERS fruits
+Output: ["Apple", "Banana", "Orange"] (unordered)
+
+3.Check if an element exists in a Set (SISMEMBER)
+SISMEMBER fruits "Banana"
+Output: 1 (exists) or 0 (does not exist)
+
+4.Remove an element from a Set (SREM)
+SREM fruits "Banana"
+Removes "Banana" from the set.
+
+5.Get the number of elements in a Set (SCARD)
+SCARD fruits
+Output: 2 (remaining elements)
+
+6.Get the intersection of two Sets (SINTER)
+SADD tropical "Banana" "Mango"
+SINTER fruits tropical
+Output: ["Banana"] (common elements)
+
+7.Get the union of two Sets (SUNION)
+SUNION fruits tropical
+Output: ["Apple", "Orange", "Banana", "Mango"]
+
+8.Get the difference between two Sets (SDIFF)
+SDIFF fruits tropical
+Output: ["Apple", "Orange"] (elements in fruits but not in tropical)
