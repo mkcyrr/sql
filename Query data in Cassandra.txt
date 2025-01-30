@@ -1,0 +1,31 @@
+Query data in Cassandra
+
+
+1. Select All Data
+SELECT * FROM users;
+Retrieves all records from the users table.
+
+2. Select Specific Columns
+SELECT name, email FROM users;
+Retrieves only the name and email columns.
+
+3. Select Data with a Condition (WHERE)
+SELECT * FROM users WHERE id = 1;
+Retrieves a user with id = 1.
+
+
+4. Filtering Data (ALLOW FILTERING)
+SELECT * FROM users WHERE name = 'Alice' ALLOW FILTERING;
+Retrieves all users named "Alice".
+
+5. Ordering Data (ORDER BY)
+SELECT * FROM users WHERE id > 0 ORDER BY id DESC;
+Retrieves users in descending order by id.
+
+6. Limiting Results (LIMIT)
+SELECT * FROM users LIMIT 5;
+Retrieves only the first 5 records.
+
+7. Count Total Rows
+SELECT COUNT(*) FROM users;
+Returns the total number of users.
